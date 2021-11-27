@@ -18,26 +18,7 @@ using namespace std;
 int wait_time;
 vector<string> num_street_temp;
 
-//******* Random String Generator//***************//
 
-// int random_number_generator(const int , const int);
-
-// std::string random_string(const int length ){
-//      std::string temp_literal;
-//      static const char charset[] =
-//         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-//         "abcdefghijklmnopqrstuvwxyz";
-
-//         srand((unsigned) time(NULL) * getpid());
-//         temp_literal.reserve(length);
-
-//         for (int i = 0; i <length; i++)
-//         {
-//             temp_literal += charset[rand() % (sizeof(charset) -1 )];
-//         }
-//         return temp_literal;
-
-//  }
 string random_string(const int lenght) {
     
     auto rand_charset = []() -> char
@@ -175,7 +156,7 @@ void street_processor(int street_dict[100][500][2], int num_of_s, int count[], i
     {
         for(z = 0; z < delete_s ; z++)
         {
-            cout<<"r"<<" \""<<num_street_temp[z]<<"\""<<endl;
+            cout<<"rm"<<" \""<<num_street_temp[z]<<"\""<<endl;
         }
         num_street_temp.clear();
     }
@@ -184,7 +165,7 @@ void street_processor(int street_dict[100][500][2], int num_of_s, int count[], i
         num_street_temp = get_strs(num_of_s);
         for(int j=0;j<num_of_s;j++)
         {
-            cout<<"a"<<" \""<<num_street_temp[j]<<"\" ";
+            cout<<"add"<<" \""<<num_street_temp[j]<<"\" ";
             for(int k=0;k<count[j];k++)
             {
                 cout<<"("<<street_dict[j][k][0]<<","<<street_dict[j][k][1]<<")";
@@ -192,7 +173,7 @@ void street_processor(int street_dict[100][500][2], int num_of_s, int count[], i
             cout<<endl;
         }
     //generate graph//
-    cout<<"g"<<endl;
+    cout<<"gg"<<endl;
     std::cout.flush();
     usleep(wait_time * 100000);
 
@@ -204,64 +185,6 @@ void street_processor(int street_dict[100][500][2], int num_of_s, int count[], i
 
 int main(int argc, char **argv)
 {
-// //************ street_processor ************
-// int n = 100;
-// int m = 500;
-// int l = 2; 
-// std::vector<vector< vector<int> > > street(n , vector< vector<int> >(m, vector<int>(l) ) );
-// street[0][0][0] = {1} ;
-// street[0][0][1] = {2} ;
-// street[0][1][0] = {3};
-// street[0][1][1] = {4};
-// street[1][0][0] = {5};
-// street[1][0][1] = {6};
-// street[1][1][0] = {7};
-// street[1][1][1] = {8};
-
-//  int count [2] = {2,0};
-
-
-// street_processor(street,3,count,1);
-
-
-
-
-
-
-//************** Check Overlap //**********
-
-// int n = 100;
-// int m = 500;
-// int l = 2;
-// std::vector<vector< vector<int> > > v(n , vector< vector<int> >(m, vector<int>(l) ) );
-// street[0][0][0] = {1} ;
-// street[0][0][1] = {2} ;
-// street[0][1][0] = {3};
-// street[0][1][4] = {4};
-// street[1][0][0] = {5};
-// street[1][0][1] = {6};
-// street[1][1][0] = {7};
-// street[1][1][1] = {8};
-// int temp_cord [2]={7,9};
-// int checker_result;
-// checker_result = check_overlap(street[0][0] ,street[0][0+1] , street[0][1], temp_cord);
-
-// std::cout<<checker_result<<std::endl;
-
-
-//**********************String random generator //**********
-
-  // vector<string> street = get_strs(10);
-
-  //    for (auto i = street.begin(); i != street.end(); i++){
-  //         cout << *i << " "; 
-  //       }
-
-
-
-
-//************ Random Number //************************
-  // std::cout<<random_number_generator(10,20)<<std::endl;
 
 
 

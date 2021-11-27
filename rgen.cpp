@@ -175,7 +175,9 @@ void street_processor(int street_dict[100][500][2], int num_of_s, int count[], i
     //generate graph//
     cout<<"gg"<<endl;
     std::cout.flush();
-    usleep(wait_time * 100000);
+   sleep(wait_time);
+
+    //usleep(wait_time * 100000);
 
 }
 
